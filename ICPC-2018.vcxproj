@@ -150,7 +150,10 @@
     <ClCompile Include="ICPC-2018.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Problem_1.h" />
+    <ClInclude Include="Problem_A.h" />
+    <ClInclude Include="Problem_B.h" />
+    <ClInclude Include="Problem_C.h" />
+    <ClInclude Include="Problem_D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

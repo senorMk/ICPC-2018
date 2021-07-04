@@ -32,7 +32,7 @@ struct Leaf : public Node
 {
 public:
 	std::string Label;
-	char ASCII_C;
+	char ASCII_C = 'A';
 	int  ASCII_Code = 0;
 
 	int GetFreq() { return GetFrequency() + Frequency; }
@@ -106,7 +106,7 @@ public:
 		return DecodedText;
 	}
 
-	Leaf* BuildTree(std::list<std::pair<int, int>>& CharactersAndFrequency)
+	std::vector<Leaf*> BuildTree(std::list<std::pair<int, int>>& CharactersAndFrequency)
 	{
 		// Initially, we'll have a list of leafs
 		std::vector<Leaf*> ListOfLeaves;
@@ -187,7 +187,7 @@ public:
 			SortedListOfLeaves.insert(InPoint, node_);
 		}
 
-		return *SortedListOfLeaves.begin();
+		return SortedListOfLeaves;
 	}
 
 private:
